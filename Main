@@ -1,0 +1,72 @@
+package sample;
+
+import java.util.Arrays;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Product pizza = new Product();
+		pizza.setTitle("Mozzarella");
+		pizza.setPrice(7);
+		pizza.setDescription("Double cheeez");
+		String[] piz = { pizza.getTitle(), pizza.getDescription() };
+		double price1 = pizza.getPrice();
+		System.out.print(Arrays.toString(piz) + " ");
+		System.out.print("= " + price1 + " $");
+		System.out.println();
+		Product cola = new Product();
+		cola.setTitle("Cola");
+		cola.setPrice(2);
+		cola.setDescription("Large");
+		String[] col = { cola.getTitle(), cola.getDescription() };
+		double price2 = cola.getPrice();
+		System.out.print(Arrays.toString(col) + " ");
+		System.out.print("= " + price2 + " $");
+	}
+
+}
+
+var Foo = basis.Class(Product, {
+  private double Price;
+	private String title;
+	private String description;
+
+	public Product() {
+		super();
+	}
+
+	public Product(double price, String title, String description) {
+		super();
+		Price = price;
+		this.title = title;
+		this.description = description;
+	}
+
+	public double getPrice() {
+		return Price;
+	}
+
+	public void setPrice(double price) {
+		Price = price;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String toString() {
+		return "Product [Price=" + Price + ", title=" + title + ", description=" + description + "]";
+	}
+});
